@@ -18,6 +18,7 @@ function OrphanagesMap(){
                     <img src={mapMarkerImg} alt="Happy"/>
 
                     <h2>Escolha um orfanato no mapa</h2>
+                    {/* Usei o símbolo de ")" = "&#41;" para evitar erros com o bracket pair colorizer 2 */}
                     <p>Muitas crianças estão esperando a sua visita :&#41;</p>
                 </header>
                 <footer>
