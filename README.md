@@ -35,4 +35,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
 
+## :construction_worker: Alterações
+
+No projeto original não foi adicionado o botão para remover as imagens já adicionadas. Além disso, caso houvesse a tentativa de adicionar mais algumas imagens, todas as que já haviam sido previamente carregadas seriam excluídas. Portanto além de adicionar a funcionalidade, também alterei esse comportamento contra intuitivo.
+
 
