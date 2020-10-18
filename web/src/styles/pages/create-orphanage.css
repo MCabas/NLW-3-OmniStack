@@ -140,6 +140,30 @@ form.create-orphanage-form .input-block .images-container img{
   border-radius: 20px;
 }
 
+form.create-orphanage-form .input-block .images-container .images-container-thumbnail{
+  position: relative;
+}
+
+form.create-orphanage-form .input-block .images-container .images-container-thumbnail button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border-radius: 0 20px 0 20px;
+  display: flex;
+  border: 1px solid #D3E2E5;
+  align-items: center;
+  justify-content: center;
+}
+
+form.create-orphanage-form .input-block .images-container .images-container-thumbnail .deleteImageButton{
+  height: 24px;
+  width: 24px;
+}
+
+
 form.create-orphanage-form .input-block .new-image {
   height: 96px;
   background: #F5F8FA;

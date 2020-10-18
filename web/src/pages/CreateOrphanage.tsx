@@ -5,11 +5,11 @@ import { LeafletMouseEvent } from 'leaflet';
 
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
-
 import { FiPlus } from "react-icons/fi";
 
 import '../styles/pages/create-orphanage.css';
 import api from '../services/api';
+import removeImage from '../images/remove-file.svg';
 
 export default function CreateOrphanage() {
 
@@ -41,11 +41,22 @@ export default function CreateOrphanage() {
     const selectedImages = Array.from(event.target.files)
     setImages(selectedImages);
 
+    
     const selectedImagesPreview = selectedImages.map(image => {
       return URL.createObjectURL(image);
     });
-
+    
+    selectedImagesPreview.push(...previewImages);
     setPreviewImages(selectedImagesPreview);
+  }
+
+  function handleRemoveImageThumbnail(imageRemove: string){
+    const newImages = previewImages.filter( image => {
+      if(imageRemove !== image){
+       return image
+      }
+    });
+    setPreviewImages(newImages);
   }
 
   async function handleSubmit(event: FormEvent){
@@ -123,7 +134,12 @@ export default function CreateOrphanage() {
               <div className="images-container">
                 {previewImages.map(image =>{
                   return(
-                    <img key={image} src={image} alt={name} />
+                    <div className="images-container-thumbnail">
+                      <img key={image} src={image} alt={name} />
+                      <button type="button" onClick={() => handleRemoveImageThumbnail(image)}>
+                        <img className="deleteImageButton" src={removeImage}/>
+                      </button>
+                    </div>
                   )
                 })}
                 <label htmlFor="image[]" className="new-image">
